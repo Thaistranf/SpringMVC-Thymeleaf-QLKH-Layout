@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+
+<!-- De do ton cong tao giao dien giong nhau cho nhieu file html-->
+<!-- thi mik se xay dung giao dien trong 1 file html duy nhat dat ten la layout.html-->
+<!-- su dung thuoc tinh th:fragment="ten-dat-trong-th:fragment" cua template engine Thymeleaf trong the mo chua code giao dien-->
+<!-- sau do su dung thuoc tinh th:replace="/folder chua layout.html(neu co, neu dat chung folder voi file html khac can giao dien thi khong can /folder)/layout (ten file html chua giao dien chung) :: ten-dat-trong-th:fragment"-->
+<!-- trong the mo do viet o file html can giao dien-->
+
+<head th:fragment="head">    <!--Tao giao dien cho phan head-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Spring Customer</title>
+
+    <style>
+        h3{background-color: blue; color: white; padding: 10px 0 10px 20px;}
+        footer{margin: 10px 0;}
+
+        #customers {
+            font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        #customers td, #customers th {
+            border: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+        #customers tr:hover {background-color: #ddd;}
+
+        #customers th {
+            padding-top: 12px;
+            padding-bottom: 12px;
+            text-align: left;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        input[type=text],input[type=email]{
+            width: 100%;
+            padding: 12px 0;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 300px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        #form {
+            width: 500px;
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .notify span{font-size: 15px; color: blue;}
+    </style>
+</head>
+<body>
+    <footer th:fragment="footer">   <!--Tao cho phan footer -->
+        &copy; 2021 ThaisTranf
+    </footer>
+</body>
+</html>
